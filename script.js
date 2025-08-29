@@ -1,5 +1,5 @@
 // ローディング画面の制御
-window.addEventListener('load', function() {
+(function() {
     // ランダムローディング画像の設定（軽量化WebP版）
     const loadingImages = [
         'assets/drthdfh (1) (1).webp',
@@ -8,34 +8,46 @@ window.addEventListener('load', function() {
         'assets/hul.gh (2).webp'
     ];
     
-    const loadingCharacter = document.querySelector('.loading-character');
-    
-    // 初期画像を設定
-    if (loadingCharacter) {
-        loadingCharacter.src = loadingImages[Math.floor(Math.random() * loadingImages.length)];
+    // DOMが準備完了次第実行
+    function initLoading() {
+        const loadingCharacter = document.querySelector('.loading-character');
+        
+        // 初期画像を設定
+        if (loadingCharacter) {
+            loadingCharacter.src = loadingImages[Math.floor(Math.random() * loadingImages.length)];
+        }
+        
+        // 0.4秒ごとに画像を切り替え
+        const imageInterval = setInterval(function() {
+            if (loadingCharacter) {
+                const randomIndex = Math.floor(Math.random() * loadingImages.length);
+                loadingCharacter.src = loadingImages[randomIndex];
+            }
+        }, 400);
+        
+        // 最小2秒間はローディング画面を表示
+        setTimeout(function() {
+            clearInterval(imageInterval); // 画像切り替えを停止
+            
+            const loadingScreen = document.getElementById('loading');
+            if (loadingScreen) {
+                loadingScreen.classList.add('fade-out');
+                
+                // フェードアウト完了後に要素を削除
+                setTimeout(function() {
+                    loadingScreen.remove();
+                }, 500);
+            }
+        }, 2000);
     }
     
-    // 0.4秒ごとに画像を切り替え
-    const imageInterval = setInterval(function() {
-        if (loadingCharacter) {
-            const randomIndex = Math.floor(Math.random() * loadingImages.length);
-            loadingCharacter.src = loadingImages[randomIndex];
-        }
-    }, 400);
-    
-    // 最小2秒間はローディング画面を表示
-    setTimeout(function() {
-        clearInterval(imageInterval); // 画像切り替えを停止
-        
-        const loadingScreen = document.getElementById('loading');
-        loadingScreen.classList.add('fade-out');
-        
-        // フェードアウト完了後に要素を削除
-        setTimeout(function() {
-            loadingScreen.remove();
-        }, 500);
-    }, 2000);
-});
+    // DOM準備完了を待つ
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initLoading);
+    } else {
+        initLoading();
+    }
+})();
 
 // スムーススクロールの実装
 document.addEventListener('DOMContentLoaded', function() {
