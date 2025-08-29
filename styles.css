@@ -145,7 +145,25 @@ body {
 .about-section {
     padding: 100px 0;
     background: linear-gradient(180deg, #fff 0%, #fdf5f8 100%);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    justify-content: space-between;
+}
+
+.about-text {
+    flex: 1;
     text-align: center;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-title {
@@ -154,6 +172,7 @@ body {
     color: #e91e63;
     font-weight: bold;
     position: relative;
+    white-space: nowrap;
 }
 
 .section-title::after {
@@ -171,28 +190,76 @@ body {
 .about-description {
     font-size: 1.3rem;
     color: #666;
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     line-height: 1.8;
+}
+
+.about-character {
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 10px 30px rgba(233, 30, 99, 0.2));
+    animation: bounce 3s ease-in-out infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 /* プロフィールセクション */
 .profile-section {
     padding: 100px 0;
     background: #fff;
+    position: relative;
+    overflow: hidden;
 }
+
+.profile-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/名称未設定のデザイン_transparent.png');
+    background-repeat: repeat;
+    background-size: auto;
+    opacity: 1;
+    z-index: 1;
+}
+
 
 .profile-content {
     display: flex;
     gap: 60px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 
 .profile-image {
     flex: 1;
     text-align: center;
     position: relative;
+}
+
+.profile-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 400px;
+    background: white;
+    border-radius: 30px;
+    z-index: 1;
 }
 
 .profile-label {
@@ -204,6 +271,8 @@ body {
     display: inline-block;
     margin-bottom: 20px;
     font-weight: bold;
+    position: relative;
+    z-index: 2;
 }
 
 .profile-img {
@@ -212,6 +281,12 @@ body {
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(233, 30, 99, 0.2);
     transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .profile-img:hover {
@@ -543,6 +618,15 @@ body {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .about-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .about-character {
+        max-width: 250px;
     }
     
     .profile-content {
