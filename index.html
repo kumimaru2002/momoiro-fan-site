@@ -1,277 +1,421 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>桃色音恋（Neko Momoiro）非公式ファンサイト</title>
-    <meta name="description" content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。">
-    
+    <meta
+      name="description"
+      content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。"
+    />
+
     <!-- OGP設定 -->
-    <meta property="og:title" content="桃色音恋（Neko Momoiro）非公式ファンサイト">
-    <meta property="og:description" content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。">
-    <meta property="og:image" content="https://kumimaru2002.github.io/momoiro-fan-site/assets/段落テキスト (1).png">
-    <meta property="og:url" content="">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="桃色音恋非公式ファンサイト">
-    <meta property="og:locale" content="ja_JP">
-    
+    <meta
+      property="og:title"
+      content="桃色音恋（Neko Momoiro）非公式ファンサイト"
+    />
+    <meta
+      property="og:description"
+      content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。"
+    />
+    <meta
+      property="og:image"
+      content="https://kumimaru2002.github.io/momoiro-fan-site/assets/ogp.png"
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="桃色音恋非公式ファンサイト" />
+    <meta property="og:locale" content="ja_JP" />
+
     <!-- Twitter Card設定 -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="桃色音恋（Neko Momoiro）非公式ファンサイト">
-    <meta name="twitter:description" content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。">
-    <meta name="twitter:image" content="https://kumimaru2002.github.io/momoiro-fan-site/assets/段落テキスト (1).png">
-    
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="桃色音恋（Neko Momoiro）非公式ファンサイト"
+    />
+    <meta
+      name="twitter:description"
+      content="桃色音恋（Neko Momoiro）の非公式ファンサイト。Citrus e-sportsストリーマー部門所属のVtuber桃色音恋の配信情報とプロフィールをご紹介しています。"
+    />
+    <meta
+      name="twitter:image"
+      content="https://kumimaru2002.github.io/momoiro-fan-site/assets/ogp.png"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- ローディング画面 -->
     <div id="loading" class="loading-screen">
-        <div class="loading-content">
-            <div class="loading-image">
-                <img src="assets/hul.gh (2).webp" alt="ローディング" class="loading-character">
-            </div>
-            <div class="loading-text">
-                <p>Loading...</p>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
-            </div>
+      <div class="loading-content">
+        <div class="loading-image">
+          <img
+            src="assets/hul.gh (2).webp"
+            alt="ローディング"
+            class="loading-character"
+          />
         </div>
+        <div class="loading-text">
+          <p>Loading...</p>
+        </div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
     </div>
 
     <!-- ヘッダー -->
     <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="#hero" class="logo-link">
-                        <span class="logo-text">桃色音恋</span>
-                        <span class="logo-subtitle">Neko Momoiro</span>
-                    </a>
-                </div>
-                <nav class="nav">
-                    <ul class="nav-list">
-                        <li><a href="#hero" class="nav-link">TOP</a></li>
-                        <li><a href="#about" class="nav-link">About</a></li>
-                        <li><a href="#profile" class="nav-link">Profile</a></li>
-                        <li><a href="#youtube" class="nav-link">Stream</a></li>
-                    </ul>
-                </nav>
-                <button class="mobile-menu-btn">☰</button>
-            </div>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <a href="#hero" class="logo-link">
+              <span class="logo-text">桃色音恋</span>
+              <span class="logo-subtitle">Neko Momoiro</span>
+            </a>
+          </div>
+          <nav class="nav">
+            <ul class="nav-list">
+              <li><a href="#hero" class="nav-link">TOP</a></li>
+              <li><a href="#about" class="nav-link">About</a></li>
+              <li><a href="#profile" class="nav-link">Profile</a></li>
+              <li><a href="#youtube" class="nav-link">Stream</a></li>
+            </ul>
+          </nav>
+          <button class="mobile-menu-btn">☰</button>
         </div>
+      </div>
     </header>
 
     <!-- ファーストビュー -->
     <section id="hero" class="hero-section">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">桃色音恋</h1>
-                <p class="hero-subtitle">非公式ファンサイト</p>
-                <div class="scroll-indicator">
-                    <div class="scroll-arrow">↓</div>
-                    <p>Scroll Down</p>
-                </div>
-            </div>
-            <div class="hero-character">
-                <img src="assets/＋Colorイメージキャラクター キービジュアル.png" alt="桃色音恋" class="character-image">
-            </div>
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1 class="hero-title">桃色音恋</h1>
+          <p class="hero-subtitle">非公式ファンサイト</p>
+          <div class="scroll-indicator">
+            <div class="scroll-arrow">↓</div>
+            <p>Scroll Down</p>
+          </div>
         </div>
-        <div class="hero-bg">
-            <video autoplay muted loop playsinline class="bg-video">
-                <source src="assets/2025-08-29 22-55-50.mp4" type="video/mp4">
-                <img src="https://placehold.jp/1920x1080/ff9ec7/ffffff?text=Background" alt="背景" class="bg-image">
-            </video>
+        <div class="hero-character">
+          <img
+            src="assets/＋Colorイメージキャラクター キービジュアル.png"
+            alt="桃色音恋"
+            class="character-image"
+          />
         </div>
+      </div>
+      <div class="hero-bg">
+        <video autoplay muted loop playsinline class="bg-video">
+          <source src="assets/2025-08-29 22-55-50.mp4" type="video/mp4" />
+          <img
+            src="https://placehold.jp/1920x1080/ff9ec7/ffffff?text=Background"
+            alt="背景"
+            class="bg-image"
+          />
+        </video>
+      </div>
     </section>
 
     <!-- アバウト -->
     <section id="about" class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="assets/drthdfh (1) (1).webp" alt="桃色音恋" class="about-character">
-                </div>
-                <div class="about-text">
-                    <h2 class="section-title">桃色音恋（ももいろねこ）とは？</h2>
-                    <p class="about-description">
-                        Citrus e-sportsのストリーマー部門所属<br>
-                        『eスポーツでみんなとつながる』<br>
-                        Vtuberももいろねこです💗<br>
-                        ももねこって呼んでね🐱<br>
-                        eスポーツカフェアンバサダーしてます！
-                    </p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="assets/drthdfh (1) (1).webp"
+              alt="桃色音恋"
+              class="about-character"
+            />
+          </div>
+          <div class="about-text">
+            <h2 class="section-title">桃色音恋（ももいろねこ）とは？</h2>
+            <p class="about-description">
+              Citrus e-sportsのストリーマー部門所属<br />
+              『eスポーツでみんなとつながる』<br />
+              Vtuberももいろねこです💗<br />
+              ももねこって呼んでね🐱<br />
+              eスポーツカフェアンバサダーしてます！
+            </p>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- プロフィール -->
     <section id="profile" class="profile-section">
-        <div class="container">
-            <div class="profile-content">
-                <div class="profile-image">
-                    <img src="assets/＋Color V.png" alt="桃色音恋" class="profile-img">
-                </div>
-                <div class="profile-details">
-                    <h2 class="profile-name">プロフィール</h2>
-                    <div class="profile-emoji">💕</div>
-                    <p class="name-jp">桃色音恋</p>
-                    <p class="name-en">Neko Momoiro</p>
-                    <div class="profile-info">
-                        <div class="info-item">
-                            <strong>初配信日:</strong> 2025年3月24日
-                        </div>
-                        <div class="info-item">
-                            <strong>誕生日:</strong> 2月22日
-                        </div>
-                        <div class="info-item">
-                            <strong>推しマーク:</strong> 🐱💗
-                        </div>
-                        <div class="info-item">
-                            <strong>好きなこと:</strong> ゲーム・お絵描・Vtuber・ボカロ・esport観戦・女児向けアニメ
-                        </div>
-                        <div class="info-item">
-                            <strong>好きなゲーム:</strong> VALORANT
-                        </div>
-                        <div class="info-item">
-                            <strong>ファンネーム:</strong> ももねず
-                        </div>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="profile-content">
+          <div class="profile-image">
+            <img
+              src="assets/＋Color V.png"
+              alt="桃色音恋"
+              class="profile-img"
+            />
+          </div>
+          <div class="profile-details">
+            <h2 class="profile-name">プロフィール</h2>
+            <div class="profile-emoji">💕</div>
+            <p class="name-jp">桃色音恋</p>
+            <p class="name-en">Neko Momoiro</p>
+            <div class="profile-info">
+              <div class="info-item">
+                <strong>初配信日:</strong> 2025年3月24日
+              </div>
+              <div class="info-item"><strong>誕生日:</strong> 2月22日</div>
+              <div class="info-item"><strong>推しマーク:</strong> 🐱💗</div>
+              <div class="info-item">
+                <strong>好きなこと:</strong>
+                ゲーム・お絵描・Vtuber・ボカロ・esport観戦・女児向けアニメ
+              </div>
+              <div class="info-item">
+                <strong>好きなゲーム:</strong> VALORANT
+              </div>
+              <div class="info-item">
+                <strong>ファンネーム:</strong> ももねず
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-
 
     <!-- YouTube動画紹介 -->
     <section id="youtube" class="youtube-section">
-        <div class="container">
-            <h2 class="section-title">配信一覧！</h2>
-            <div class="youtube-list">
-                <div class="youtube-item">
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/MlFLAxiuF5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#桃色音恋初配信】はじめまして！桃色音恋です！💗</h3>
-                    </div>
-                </div>
-                <div class="youtube-item youtube-item-reverse">
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【初めまして逆凸】Citrusの初対面の人と話す！！</h3>
-                    </div>
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EbKKGIcM73c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="youtube-item">
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/Ccc44eCJzHo?si=S-vKmGCGT4wO8aoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#ドキドキ文芸部プラス 】kawaiiゲームがあると聞いてDoki Doki　※完全初見ネタバレ禁止</h3>
-                    </div>
-                </div>
-                <div class="youtube-item youtube-item-reverse">
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#valorant 】さシみCup前日コソ練w/ぜろさん</h3>
-                    </div>
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/6IqDPZUaL6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="youtube-item">
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lgScY9hqPeM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#valorant 】VALOカスタム初心者の部！！！！急遽参加します！#第三回MGG</h3>
-                    </div>
-                </div>
-                <div class="youtube-item youtube-item-reverse">
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#valorant 】のどちゃんとvalo #参加型 で遊ぶよ～～～！with姫路のどかさん</h3>
-                    </div>
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/KX1D93G7FYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="youtube-item">
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/e5DsctW8kt8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#bapbap 】Citrusコラボたのしそうなゲームする！！！！！</h3>
-                    </div>
-                </div>
-                <div class="youtube-item youtube-item-reverse">
-                    <div class="youtube-info">
-                        <h3 class="youtube-title">【#雑談 】おえかき雑談サムネイラスト描くよ</h3>
-                    </div>
-                    <div class="youtube-video">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/JsmrGk_U3sc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">配信一覧！</h2>
+        <div class="youtube-list">
+          <div class="youtube-item">
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/MlFLAxiuF5Q"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#桃色音恋初配信】はじめまして！桃色音恋です！💗
+              </h3>
+            </div>
+          </div>
+          <div class="youtube-item youtube-item-reverse">
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【初めまして逆凸】Citrusの初対面の人と話す！！
+              </h3>
+            </div>
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/EbKKGIcM73c"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="youtube-item">
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/Ccc44eCJzHo?si=S-vKmGCGT4wO8aoQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#ドキドキ文芸部プラス 】kawaiiゲームがあると聞いてDoki
+                Doki　※完全初見ネタバレ禁止
+              </h3>
+            </div>
+          </div>
+          <div class="youtube-item youtube-item-reverse">
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#valorant 】さシみCup前日コソ練w/ぜろさん
+              </h3>
+            </div>
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/6IqDPZUaL6w"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="youtube-item">
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/lgScY9hqPeM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#valorant
+                】VALOカスタム初心者の部！！！！急遽参加します！#第三回MGG
+              </h3>
+            </div>
+          </div>
+          <div class="youtube-item youtube-item-reverse">
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#valorant 】のどちゃんとvalo #参加型
+                で遊ぶよ～～～！with姫路のどかさん
+              </h3>
+            </div>
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/KX1D93G7FYo"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+          <div class="youtube-item">
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/e5DsctW8kt8"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#bapbap 】Citrusコラボたのしそうなゲームする！！！！！
+              </h3>
+            </div>
+          </div>
+          <div class="youtube-item youtube-item-reverse">
+            <div class="youtube-info">
+              <h3 class="youtube-title">
+                【#雑談 】おえかき雑談サムネイラスト描くよ
+              </h3>
+            </div>
+            <div class="youtube-video">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/JsmrGk_U3sc"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- フッター -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <div class="footer-links">
-                        <div class="link-group">
-                            <h4>🔗 公式リンク</h4>
-                            <ul>
-                                <li><a href="https://www.youtube.com/@NekoMomoiro/streams" target="_blank">桃色音恋 YouTube</a></li>
-                                <li><a href="https://x.com/Neko_Citrus" target="_blank">桃色音恋 X (旧Twitter)</a></li>
-                            </ul>
-                        </div>
-                        <div class="link-group">
-                            <h4>🔗 その他リンク</h4>
-                            <ul>
-                                <li><a href="https://x.com/search?q=%23%E3%82%82%E3%82%82%E3%81%84%E3%82%8D%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9&src=typeahead_click&f=live" target="_blank">ファンアート集</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-info">
-                        <div class="about-site">
-                            <h3>📌 このサイトについて</h3>
-                            <p>
-                                当サイトは、桃色音恋さんを応援する非公式ファンサイトです。<br>
-                                当サイトは、桃色音恋さん本人とは一切関係ありません。<br>
-                                当サイトで掲載している画像や動画の著作権・肖像権等は各権利所有者に帰属致します。
-                            </p>
-                        </div>
-                        <div class="privacy">
-                            <h3>🔐 プライバシー ポリシー</h3>
-                            <p>
-                                当サイトでは、サービス向上のためにクッキーを使用し、
-                                アクセス状況を分析しています。
-                                これらのデータは匿名で収集され、個人を特定することはありません。
-                            </p>
-                        </div>
-                    </div>
-                    <div class="navigation">
-                        <h3>📍 ナビゲーション</h3>
-                        <div class="nav-links">
-                            <a href="#hero">TOP</a>
-                            <a href="#about">About</a>
-                            <a href="#profile">Profile</a>
-                            <a href="#youtube">YouTube</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>2025 桃色音恋非公式ファンサイト</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <div class="footer-links">
+              <div class="link-group">
+                <h4>🔗 公式リンク</h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@NekoMomoiro/streams"
+                      target="_blank"
+                      >桃色音恋 YouTube</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://x.com/Neko_Citrus" target="_blank"
+                      >桃色音恋 X (旧Twitter)</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="link-group">
+                <h4>🔗 その他リンク</h4>
+                <ul>
+                  <li>
+                    <a
+                      href="https://x.com/search?q=%23%E3%82%82%E3%82%82%E3%81%84%E3%82%8D%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%90%E3%82%B9&src=typeahead_click&f=live"
+                      target="_blank"
+                      >ファンアート集</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div class="footer-info">
+              <div class="about-site">
+                <h3>📌 このサイトについて</h3>
+                <p>
+                  当サイトは、桃色音恋さんを応援する非公式ファンサイトです。<br />
+                  当サイトは、桃色音恋さん本人とは一切関係ありません。<br />
+                  当サイトで掲載している画像や動画の著作権・肖像権等は各権利所有者に帰属致します。
+                </p>
+              </div>
+              <div class="privacy">
+                <h3>🔐 プライバシー ポリシー</h3>
+                <p>
+                  当サイトでは、サービス向上のためにクッキーを使用し、
+                  アクセス状況を分析しています。
+                  これらのデータは匿名で収集され、個人を特定することはありません。
+                </p>
+              </div>
+            </div>
+            <div class="navigation">
+              <h3>📍 ナビゲーション</h3>
+              <div class="nav-links">
+                <a href="#hero">TOP</a>
+                <a href="#about">About</a>
+                <a href="#profile">Profile</a>
+                <a href="#youtube">YouTube</a>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>2025 桃色音恋非公式ファンサイト</p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
