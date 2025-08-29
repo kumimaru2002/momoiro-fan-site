@@ -95,6 +95,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
+    // モバイルメニューの制御
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const nav = document.querySelector('.nav');
+    
+    if (mobileMenuBtn && nav) {
+        mobileMenuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            mobileMenuBtn.classList.toggle('active');
+            
+            // アイコンの切り替え
+            if (nav.classList.contains('active')) {
+                mobileMenuBtn.innerHTML = '✕';
+            } else {
+                mobileMenuBtn.innerHTML = '☰';
+            }
+        });
+        
+        // メニューリンクをクリックしたらメニューを閉じる
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                mobileMenuBtn.classList.remove('active');
+                mobileMenuBtn.innerHTML = '☰';
+            });
+        });
+    }
+
     // ヘッダーナビゲーションのスムーススクロール
     const headerNavLinks = document.querySelectorAll('.nav-link[href^="#"]');
     headerNavLinks.forEach(link => {
