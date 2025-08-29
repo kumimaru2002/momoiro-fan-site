@@ -1,3 +1,17 @@
+// ローディング画面の制御
+window.addEventListener('load', function() {
+    // 最小2秒間はローディング画面を表示
+    setTimeout(function() {
+        const loadingScreen = document.getElementById('loading');
+        loadingScreen.classList.add('fade-out');
+        
+        // フェードアウト完了後に要素を削除
+        setTimeout(function() {
+            loadingScreen.remove();
+        }, 500);
+    }, 2000);
+});
+
 // スムーススクロールの実装
 document.addEventListener('DOMContentLoaded', function() {
     // ヘッダーのスクロール効果
