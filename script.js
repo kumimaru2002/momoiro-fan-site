@@ -64,12 +64,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // アニメーション対象の要素を監視
-    const animateElements = document.querySelectorAll('.feature-item, .profile-details, .about-description');
+    const animateElements = document.querySelectorAll('.profile-details, .about-description');
     animateElements.forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(30px)';
         el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(el);
+    });
+
+    // YouTube動画アイテムのスクロールアニメーション
+    const youtubeItems = document.querySelectorAll('.youtube-item');
+    const youtubeObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate-in');
+            } else {
+                entry.target.classList.remove('animate-in');
+            }
+        });
+    }, {
+        threshold: 0.2,
+        rootMargin: '0px 0px -50px 0px'
+    });
+
+    youtubeItems.forEach(item => {
+        youtubeObserver.observe(item);
     });
 
     // ソーシャルボタンのクリックイベント
