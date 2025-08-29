@@ -1,7 +1,32 @@
 // ローディング画面の制御
 window.addEventListener('load', function() {
+    // ランダムローディング画像の設定（軽量化WebP版）
+    const loadingImages = [
+        'assets/drthdfh (1) (1).webp',
+        'assets/ｆｔｔｆｌ (1).webp',
+        'assets/futfu (1).webp',
+        'assets/hul.gh (2).webp'
+    ];
+    
+    const loadingCharacter = document.querySelector('.loading-character');
+    
+    // 初期画像を設定
+    if (loadingCharacter) {
+        loadingCharacter.src = loadingImages[Math.floor(Math.random() * loadingImages.length)];
+    }
+    
+    // 0.4秒ごとに画像を切り替え
+    const imageInterval = setInterval(function() {
+        if (loadingCharacter) {
+            const randomIndex = Math.floor(Math.random() * loadingImages.length);
+            loadingCharacter.src = loadingImages[randomIndex];
+        }
+    }, 400);
+    
     // 最小2秒間はローディング画面を表示
     setTimeout(function() {
+        clearInterval(imageInterval); // 画像切り替えを停止
+        
         const loadingScreen = document.getElementById('loading');
         loadingScreen.classList.add('fade-out');
         
