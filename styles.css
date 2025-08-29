@@ -294,6 +294,7 @@ body {
     flex: 1;
     color: white;
     text-align: center;
+    padding-right: 50px;
 }
 
 .hero-title {
@@ -350,17 +351,19 @@ body {
 }
 
 .hero-character {
-    flex: 1;
+    flex: 1.2;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    padding-left: 50px;
 }
 
 .character-image {
-    max-width: 400px;
+    max-width: 500px;
     height: auto;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
     animation: float 3s ease-in-out infinite;
+    margin-right: -50px;
 }
 
 @keyframes float {
@@ -942,25 +945,11 @@ body {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid #444;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .footer-bottom p {
     color: #888;
     font-size: 0.9rem;
-}
-
-.secret-link {
-    color: #ff9ec7;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.secret-link:hover {
-    color: #fff;
 }
 
 /* レスポンシブ対応 */
@@ -976,11 +965,15 @@ body {
     .hero-content {
         flex-direction: column;
         text-align: center;
+        justify-content: center;
     }
     
-    .character-image {
-        max-width: 300px;
-        margin-top: 2rem;
+    .hero-text {
+        padding-right: 0;
+    }
+    
+    .hero-character {
+        display: none;
     }
     
     .section-title {
@@ -1016,11 +1009,6 @@ body {
     .footer-section {
         grid-template-columns: 1fr;
         gap: 20px;
-    }
-    
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
     }
     
     .features-grid {
@@ -1075,10 +1063,6 @@ body {
     
     .hero-subtitle {
         font-size: 1.2rem;
-    }
-    
-    .character-image {
-        max-width: 250px;
     }
     
     .section-title {
